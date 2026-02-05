@@ -1,33 +1,35 @@
 # Intelligent Build and Release Manager
 
-## Overview
-This project implements an Intelligent Build and Release Manager using Machine Learning to automate build stability analysis and release decisions.
-
-## Problem Statement
-Manual build and release processes are time-consuming and error-prone. Unstable builds may be released accidentally, causing failures in production.
-
-## Proposed Solution
-The system analyzes build parameters using a Machine Learning model and automatically approves or blocks releases based on build stability.
-
-## System Architecture
-Data Collection → Preprocessing → ML Model Training → Build Prediction → Auto Release → Logging
+## Project Description
+This project demonstrates an Intelligent Build and Release Manager using Machine Learning.
+It predicts build stability based on historical build data and automates release approval.
 
 ## Technologies Used
 - Python
-- Machine Learning (Scikit-learn)
+- Machine Learning (Logistic Regression)
+- Scikit-learn
 - Git & GitHub
-- CSV for logging
+
+## Project Structure
+- train_model.py : Trains and saves ML model
+- intell.py : Main pipeline execution
+- build_model.pkl : Trained ML model
+- build_monitor_log.csv : Build monitoring logs
 
 ## How to Run
-1. Train the model:
-python train_model.py
-2. Run the build manager:
+1. Install dependencies
+   pip install -r requirements.txt
 
+2. Train the model (optional)
+   python train_model.py
+
+3. Run the pipeline
+   python intell.py
 
 ## Output
-- Predicts build status (Stable / Unstable)
-- Automatically approves stable builds
-- Logs results in `build_monitor_log.csv`
+- Build stability prediction
+- Auto release approval
+- Pipeline execution status
 
 ## Conclusion
-The Intelligent Build and Release Manager improves software reliability by automating build and release decisions using Machine Learning.
+The project automates build monitoring and release decisions using ML.
